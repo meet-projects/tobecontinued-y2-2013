@@ -9,5 +9,8 @@ class Line (models.Model):
 
 class Story (models.Model):
 	title = models.CharField(max_length=30)
+
+	def __unicode__(self):
+		return self.title
 	
 	

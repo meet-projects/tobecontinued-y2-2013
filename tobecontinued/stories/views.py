@@ -6,6 +6,7 @@ def homePage(request):
     return render(request, 'stories/HomePage.html', context)
 
 def submitLine(request):
+    sentence = request.POST['sentence']
     
 def storyline(request):
     context={}
