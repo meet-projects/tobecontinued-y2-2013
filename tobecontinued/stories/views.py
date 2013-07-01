@@ -19,3 +19,8 @@ def storyline(request):
     context={'Lines':lines}
     return render(request,'stories/storyline.html',context)
 
+def clear(request):
+    s = Story.objects.filter(title = "Sadek the Duck")
+    Line.objects.filter(story = s[0]).delete()
+    return HttpResponseRedirect('story')
+

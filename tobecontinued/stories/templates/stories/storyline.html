@@ -28,6 +28,10 @@ Add To Your Story
 <input type="submit" value="Add"/>
 </form>
 
+<form action="clear" method="post">
+{% csrf_token %}
+<input type="submit" value="New Story"/>
+</form>
 
 
 </body>
