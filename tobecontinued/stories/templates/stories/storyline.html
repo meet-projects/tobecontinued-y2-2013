@@ -20,18 +20,19 @@ Create your story
 <h3>{{story.title}} </h3>
 
 {% for line in lines %}
-<p> {{ line.content }} </p>
+<p> {{ Line.content }} </p>
 {% endfor %}
 <br><br><br><br>
 <br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br>
-<table>
-<tr>
-<td id="type"> Type your sentence </td>
-<td><input id="sentence" type="text" name="sentence"></td>
-</tr>
-</table>
+<form action="addingline" method="post">
+{% csrf_token %}
+Your_sentence<input type="text" name="sentence"/><br>
+<input type="submit" value="Add"/>
+</form>
+
+
 </body>
 
 </html>
