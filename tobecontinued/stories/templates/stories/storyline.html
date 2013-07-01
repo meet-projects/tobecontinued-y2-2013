@@ -17,10 +17,19 @@ Create your story
 <br><br><br><br>
 <br><br><br><br>
 
+<h3>{{story.title}} </h3>
+
+{% for line in lines %}
+<p> {{ line.content }} </p>
+{% endfor %}
+<br><br><br><br>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br>
 <table>
 <tr>
-<td> type your sentence </td>
-<td><div id=sentence2"> <input type="text" name="sentence"></div></td>
+<td id="type"> Type your sentence </td>
+<td><input id="sentence" type="text" name="sentence"></td>
 </tr>
 </table>
 </body>
