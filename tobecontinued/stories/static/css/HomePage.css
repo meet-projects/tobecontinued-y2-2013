@@ -1,11 +1,23 @@
 body { background-color:#2f4b66
 }
 
-#title {color:white; font-size:250%; text-align:center;font-family:"Keter YG"; font-style:normal;
+
+
+#title {color:white; font-size:500%; text-align:center;font-family:"tahoma"; font-style:normal;
 }
 
-#Description {color:white; font-size:240%;font-family:"Keter YG"; font-style:normal;
-text-align:center;
-top:50px;
+
+p {color:white; font-size:200%;font-family:"tahoma";
+
 }
 
+#username {color:white; font-size:100%;font-family:"tahoma";
+
+}
+
+#pass {color:white; font-size:100%;font-family:"tahoma";
+
+}
+#su {color:white; font-size:100%;font-family:"tahoma";
+
+}
