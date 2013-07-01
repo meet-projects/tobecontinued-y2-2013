@@ -8,6 +8,9 @@ class Line (models.Model):
 		return self.content
 
 class Story (models.Model):
-	#title = models.CharField(max_length=30)
-	pass
+	title = models.CharField(max_length=30)
+
+	def __unicode__(self):
+		return self.title
+	
 	

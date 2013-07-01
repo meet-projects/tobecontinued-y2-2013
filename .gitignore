@@ -1,4 +1,4 @@
 db
 *.pyc
-*.html~
-*.css~
+*~
+

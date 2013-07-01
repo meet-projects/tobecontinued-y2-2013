@@ -13,5 +13,8 @@ def submitLine(request):
     return HttpResponseRedirect('story')
     
 def storyline(request):
-    context={}
+    stories = Story.objects.filter(title = "Sadek the Duck")
+    lines = Line.objects.filter(story = stories[0])
+    context={'stories/storyline':lines}
     return render(request,'stories/storyline.html',context)
+
