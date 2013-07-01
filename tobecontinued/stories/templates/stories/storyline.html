@@ -3,7 +3,7 @@
 <link rel="stylesheet"type="text/css"
 href= "{{ STATIC_URL }}css/storyline.css">
 <title>
-Create story
+Add To Your Story
 </title>
 </head>
 <body>
@@ -12,25 +12,22 @@ Create story
 </div>
 
 <div id="create">
-Create your story
+Add To Your Story
 </div>
 <br><br><br><br>
 <br><br><br><br>
 
-<h3>{{story.title}} </h3>
-
-{% for line in lines %}
+{% for Line in Lines %}
 <p> {{ Line.content }} </p>
 {% endfor %}
-<br><br><br><br>
-<br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br>
-<form action="addingline" method="post">
+
+
+<form action="submitLine" method="post">
 {% csrf_token %}
-Your_sentence<input type="text" name="sentence"/><br>
+<h4>Your sentence </h4><input type="text" name="sentence"/>
 <input type="submit" value="Add"/>
 </form>
+
 
 
 </body>

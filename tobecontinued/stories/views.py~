@@ -1,0 +1,21 @@
+# Create your views here.
+from django.shortcuts import render
+from stories.models import Line, Story
+from django.http import HttpResponseRedirect
+
+def homePage(request):
+    context = {}
+    return render(request, 'stories/HomePage.html', context)
+
+def submitLine(request):
+    sentence = request.POST['sentence']
+    s = Story.objects.filter(title__startswith = "Sadek")
+    Line(content = sentence, story = s[0]).save()
+    return HttpResponseRedirect('story')
+    
+def storyline(request):
+    line_list = Line.objects.all()
+    lastline = line_list[-1]
+    line_list=[lastline]
+    context={"Lines":line_list}
+    return render(request,'stories/storyline.html',context)
