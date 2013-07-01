@@ -8,6 +8,7 @@ from stories import views
 urlpatterns = patterns('',
                        url(r'^home$', views.homePage),
                        url(r'^submitLine$', views.submitLine),
+                       url(r'^story$', views.storyline),
     # Examples:
     # url(r'^$', 'tobecontinued.views.home', name='home'),
     # url(r'^tobecontinued/', include('tobecontinued.foo.urls')),

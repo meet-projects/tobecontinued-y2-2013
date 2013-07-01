@@ -7,3 +7,6 @@ def homePage(request):
 
 def submitLine(request):
     
+def storyline(request):
+    context={}
+    return render(request,'stories/storyline.html',context)
