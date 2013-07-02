@@ -1,6 +1,7 @@
 # Create your views here.
 from django.shortcuts import render
 from stories.models import Line, Story
+from django.http import HttpResponseRedirect
 
 def homePage(request):
     context = {}
@@ -15,6 +16,11 @@ def submitLine(request):
 def storyline(request):
     stories = Story.objects.filter(title = "Sadek the Duck")
     lines = Line.objects.filter(story = stories[0])
-    context={'stories/storyline':lines}
+    context={'Lines':lines}
     return render(request,'stories/storyline.html',context)
+
+def clear(request):
+    s = Story.objects.filter(title = "Sadek the Duck")
+    Line.objects.filter(story = s[0]).delete()
+    return HttpResponseRedirect('story')
 
