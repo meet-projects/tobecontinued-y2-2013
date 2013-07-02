@@ -7,6 +7,6 @@ body { background-color:#2f4b66
 #create { color:white; font-size:200%;position:absolute;top:15%;right:40%;text-decoration:underline;}
 
 
-#sentence {width:600%;}
+#sentence {width:75%;}
 
-#type {color:white; font-size:120%; font-family:"tahoma";}
+#sent {color:white; font-size:120%; font-family:"tahoma";}
