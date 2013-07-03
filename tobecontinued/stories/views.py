@@ -15,7 +15,7 @@ def submitLine(request, storyID):
     sentence = request.POST['sentence']
     s = Story.objects.filter(id = storyID)
     Line(content = sentence, story = s[0]).save()
-    return HttpResponseRedirect('story/' + str(storyID))
+    return HttpResponseRedirect('/story/' + str(storyID))
 
 def storyline(request, storyID):
     stories = Story.objects.filter(id = storyID)
@@ -24,7 +24,7 @@ def storyline(request, storyID):
     if stories != []:
         s = stories[0]
 	lines = Line.objects.filter(story = stories[0])
-    	context={'Lines':lines, 'storyTitle':s.title}	
+    	context={'Lines':lines, 'storyTitle':s.title, 'storyID': str(s.id)}	
     return render(request,'stories/storyline.html',context)
 
 
