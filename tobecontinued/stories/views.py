@@ -15,6 +15,8 @@ def submitLine(request):
 def storyline(request):
     stories = Story.objects.filter(title = "Sadek the Duck")
     lines = Line.objects.filter(story = stories[0])
-    context={'stories/storyline':lines}
+    x=len(lines)
+    c=lines[x-1]
+    context={'stories/storyline':c}
     return render(request,'stories/storyline.html',context)
 
