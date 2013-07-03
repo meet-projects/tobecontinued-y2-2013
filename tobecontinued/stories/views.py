@@ -46,3 +46,5 @@ def newStory(request):
   #  a.save()
   #  return HttpResponseRedirect('story/' + a.id)
     
+def profile(request):
+    return render(request, 'stories/profile.html', {})
