@@ -1,6 +1,7 @@
 from django.db import models
 
 class Line (models.Model):
+#user(who inputed the line, so they'll only see their own line)
 	content = models.CharField(max_length=200)
 	story = models.ForeignKey('Story')
 	
@@ -12,5 +13,4 @@ class Story (models.Model):
 
 	def __unicode__(self):
 		return self.title
-	
-	
+
