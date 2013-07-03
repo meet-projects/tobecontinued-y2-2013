@@ -1,0 +1,30 @@
+<html>
+<head>
+
+<link rel="stylesheet"type="text/css"
+href= "{{ STATIC_URL }}css/createstory.css">
+
+<title>
+Create New Story
+</title>
+</head>
+<body>
+<div id="title">
+~To Be Continued~
+</div>
+
+<div id="create">
+Add To Your Story
+</div>
+<br><br><br><br>
+
+<form action="newStory" method="post">
+{% csrf_token %}
+<div>Title</div><input type="text" name="Title"/>
+<div>First line</div><input type="text" name="firstLine"/>
+<input type="submit" value="Create"/>
+</form>
+
+</html>
+
+
