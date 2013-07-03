@@ -13,8 +13,6 @@ To Be Continued
 <body>
 
 
-<img  id="diff" src="{{ STATIC_URL }}images/pic.jpg" alt= "Logo" 
-width="95%" height="55%">
 
 <br>
 <br>
@@ -43,9 +41,11 @@ Password
 </table>
 
 <br>
-<div id="su">
-Don't have an account? <a href="signuppage.html" </a> Sign up now!
-</div>
+<form action="signup" method="post">
+{% csrf_token %}
+<div id="ll">Don't have an account?<br><br>
+<input type="submit" value="Sign up"/> now!</div>
+</form>
 
 
 
