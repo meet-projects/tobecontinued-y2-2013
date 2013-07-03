@@ -13,6 +13,7 @@ urlpatterns = patterns('',
                        url(r'^profile$', views.profile),
                        url(r'^create$', views.create),
                        url(r'^newStory$' , views.newStory),
+                       url(r'^signup$', views.signup),
     # Examples:
     # url(r'^$', 'tobecontinued.views.home', name='home'),
     # url(r'^tobecontinued/', include('tobecontinued.foo.urls')),

@@ -67,3 +67,9 @@ def profile(request):
 
 
 
+=======
+    return render(request, 'stories/profile.html', {})
+
+def signup(request):
+    return render(request, 'stories/signuppage.html', {})
+>>>>>>> 90d9451dcae431d92214553119f4019c9ab2a251
