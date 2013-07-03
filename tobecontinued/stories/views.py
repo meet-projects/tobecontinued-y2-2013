@@ -33,4 +33,7 @@ def newStory(request):
     a=Story(title = newStory)
     a.save()
     return HttpResponseRedirect('story/' + a.id)
+
+def signup(request):
+    return render(request, 'stories/signuppage.html', {})
     
