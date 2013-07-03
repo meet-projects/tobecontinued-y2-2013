@@ -12,7 +12,7 @@ urlpatterns = patterns('',
                        url(r'^create$', views.create),
                        url(r'^newStory$' , views.newStory),
                        url(r'^signup$',views.Signup),
-                       url(r'^profile$' , views.profile),
+                       
                       
     # Examples:
     # url(r'^$', 'tobecontinued.views.home', name='home'),

@@ -39,16 +39,11 @@ def newStory(request):
     new = Story(title = title1)
     new.save()
     Line(content = firstLine, story = new).save()
-    return HttpResponseRedirect('story/' + str(new.id))
-
-#def newStory(request):
-  #  newStory = request.POST['newStory']
-  #  a=Story(title = newStory)
-  #  a.save()
-  #  return HttpResponseRedirect('story/' + a.id)
+    return HttpResponseRedirect('/story/' + str(new.id))
     
 def profile(request):
-    return render(request, 'stories/profile.html', {})
+    context = {'storiesList':Story.objects.all()}
+    return render(request, 'stories/profile.html', context)
 
-def Signup(request):
-    return render(request,'stories/signuppage.html', {})
+def signup(request):
+    return render(request, 'stories/signuppage.html', {})
