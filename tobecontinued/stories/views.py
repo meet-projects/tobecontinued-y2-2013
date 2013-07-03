@@ -49,3 +49,6 @@ def newStory(request):
     
 def profile(request):
     return render(request, 'stories/profile.html', {})
+
+def Signup(request):
+    return render(request,'stories/signuppage.html', {})
