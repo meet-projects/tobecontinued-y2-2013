@@ -12,15 +12,25 @@ def submitLine(request):
     s = Story.objects.filter(title__startswith = "Sadek")
     Line(content = sentence, story = s[0]).save()
     return HttpResponseRedirect('story')
-    
-def storyline(request):
-    stories = Story.objects.filter(title = "Sadek the Duck")
-    lines = Line.objects.filter(story = stories[0])
-    context={'Lines':lines}
+
+def storyline(request, storyID):
+    stories = Story.objects.filter(id = storyID)
+    list1 = ['Story Not Found']
+    context = {'Lines':list1}
+    if stories != []:
+	lines = Line.objects.filter(story = stories[0])
+    	context={'Lines':lines}	
     return render(request,'stories/storyline.html',context)
+
 
 def clear(request):
     s = Story.objects.filter(title = "Sadek the Duck")
     Line.objects.filter(story = s[0]).delete()
     return HttpResponseRedirect('story')
 
+def newStory(request):
+    newStory = request.POST['newStory']
+    a=Story(title = newStory)
+    a.save()
+    return HttpResponseRedirect('story/' + a.id)
+    
