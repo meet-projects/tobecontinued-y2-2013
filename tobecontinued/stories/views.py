@@ -15,16 +15,20 @@ def submitLine(request, storyID):
     sentence = request.POST['sentence']
     s = Story.objects.filter(id = storyID)
     Line(content = sentence, story = s[0]).save()
+    s[0].lineNum += 1
     return HttpResponseRedirect('/story/' + str(storyID))
 
 def storyline(request, storyID):
     stories = Story.objects.filter(id = storyID)
+    s = stories[0]
     list1 = ['Story Not Found']
     context = {'Lines':list1}
     if stories != []:
-        s = stories[0]
-	lines = Line.objects.filter(story = stories[0])
-    	context={'Lines':lines, 'storyTitle':s.title, 'storyID': str(s.id)}	
+	lines = Line.objects.filter(story = s)
+	if s.lineNum = s.maxNum:
+	    context = {'Lines':lines, 'storyTitle':s.title, 'storyID': str(s.id), 'bool' = True} 
+    	else:
+	    context={'Lines':lines[len(lines)-1], 'storyTitle':s.title, 'storyID': str(s.id), 'bool' = False}	
     return render(request,'stories/storyline.html',context)
 
 
@@ -36,7 +40,8 @@ def storyline(request, storyID):
 def newStory(request):
     title1 = request.POST['Title']
     firstLine = request.POST['firstLine']
-    new = Story(title = title1)
+    numStory = request.POST['numStory']
+    new = Story(title = title1, maxNum = numStory, lineNum = 1)
     new.save()
     Line(content = firstLine, story = new).save()
     return HttpResponseRedirect('/story/' + str(new.id))

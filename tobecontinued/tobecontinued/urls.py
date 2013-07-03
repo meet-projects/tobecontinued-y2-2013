@@ -11,7 +11,7 @@ urlpatterns = patterns('',
                        url(r'^story/(?P<storyID>\d+)$', views.storyline),
                        url(r'^create$', views.create),
                        url(r'^newStory$' , views.newStory),
-                       url(r'^signup$',views.Signup),
+                       url(r'^signup$',views.signup),
                        
                       
     # Examples:
