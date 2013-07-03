@@ -48,4 +48,22 @@ def newStory(request):
   #  return HttpResponseRedirect('story/' + a.id)
     
 def profile(request):
-    return render(request, 'stories/profile.html', {})
+    context = {'storiesList':Story.objects.all()}
+    return render(request, 'stories/profile.html', context)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
