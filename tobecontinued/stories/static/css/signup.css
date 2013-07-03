@@ -1,0 +1,26 @@
+body { background-color:#2f4b66
+}
+
+#diff {
+margin-left:3%;
+} 
+
+p { color:white; font-size:150%; text-align:center;
+}
+
+.signup { color:white; font-size:18; text-align:center;
+}
+
+#signupbutton {color:#0066FF; font-size:24; 
+}
+
+#signup_container {
+	text-align:center;
+	border:1px solid;
+	border-color:#CCCCFF;
+	border-radius: 10px;
+}
+#sign_div_con{
+	margin-left:44%;
+        margin-right:44%;
+}
