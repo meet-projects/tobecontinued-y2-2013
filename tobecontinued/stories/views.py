@@ -39,7 +39,7 @@ def newStory(request):
     new = Story(title = title1)
     new.save()
     Line(content = firstLine, story = new).save()
-    return HttpResponseRedirect('story/' + str(new.id))
+    return HttpResponseRedirect('/story/' + str(new.id))
 
 #def newStory(request):
   #  newStory = request.POST['newStory']
