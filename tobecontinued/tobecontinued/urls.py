@@ -9,7 +9,7 @@ urlpatterns = patterns('',
                        url(r'^home$', views.homePage),
                        url(r'^submitLine/(?P<storyID>[\d]+)$', views.submitLine),
                        url(r'^story/(?P<storyID>[\d]+)$', views.storyline),
-     #                  url(r'^clear$', views.clear),
+                       ##url(r'^clear$', views.clear),
                        url(r'^create$', views.create),
                        url(r'^newStory$' , views.newStory),
     # Examples:
