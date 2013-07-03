@@ -25,10 +25,10 @@ def storyline(request, storyID):
     context = {'Lines':list1}
     if stories != []:
 	lines = Line.objects.filter(story = s)
-	if s.lineNum = s.maxNum:
-	    context = {'Lines':lines, 'storyTitle':s.title, 'storyID': str(s.id), 'bool' = True} 
+	if s.lineNum == s.maxNum:
+	    context = {'Lines':lines, 'storyTitle':s.title, 'storyID': str(s.id), 'bool' :True} 
     	else:
-	    context={'Lines':lines[len(lines)-1], 'storyTitle':s.title, 'storyID': str(s.id), 'bool' = False}	
+	    context={'Lines':lines[len(lines)-1], 'storyTitle':s.title, 'storyID': str(s.id), 'bool' :False}	
     return render(request,'stories/storyline.html',context)
 
 
@@ -40,7 +40,7 @@ def storyline(request, storyID):
 def newStory(request):
     title1 = request.POST['Title']
     firstLine = request.POST['firstLine']
-    numStory = request.POST['numStory']
+    numStory = request.POST['numLine']
     new = Story(title = title1, maxNum = numStory, lineNum = 1)
     new.save()
     Line(content = firstLine, story = new).save()
