@@ -15,19 +15,22 @@ Add To Your Story
 Add To Your Story
 </div>
 <br><br><br><br>
-<br><br><br><br>
 
 {% for Line in Lines %}
-<p> {{ Line.content }} </p>
+<p id="line"> {{ Line.content }} </p>
 {% endfor %}
 
 
 <form action="submitLine" method="post">
 {% csrf_token %}
-<h4>Your sentence </h4><input type="text" name="sentence"/>
+<div id="sent">Your sentence </div><br><input id="sentence" type="text" name="sentence"/>
 <input type="submit" value="Add"/>
 </form>
 
+<form action="clear" method="post">
+{% csrf_token %}
+<input type="submit" value="New Story"/>
+</form>
 
 
 </body>
