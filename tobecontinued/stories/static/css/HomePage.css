@@ -1,7 +1,5 @@
-body { background-color:#2f4b66
-}
-
-
+body {background-image:url('blue2.jpeg');
+background-color:#cccccc;}
 
 #title {color:white; font-size:500%; text-align:center;font-family:"tahoma"; font-style:normal;
 }
@@ -21,7 +19,4 @@ p {color:white; font-size:200%;font-family:"tahoma";
 #su {color:white; font-size:100%;font-family:"tahoma";
 
 }
-
-#diff {
-margin-left:3%;
-}
+#ll{color:white;font-size:100%;}

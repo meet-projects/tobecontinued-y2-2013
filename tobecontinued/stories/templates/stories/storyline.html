@@ -16,10 +16,18 @@ Add To Your Story
 </div>
 <br><br><br><br>
 
+<br>
+<br>
+<div id="storytitle">
+Story title: {{storyTitle}}
+</div>
+
+
+
+{% if bool==False %}
 {% for Line in Lines %}
 <p id="line"> {{ Line.content }} </p>
 {% endfor %}
-
 
 <form action="{% url 'submitLine' storyID %}" method="post">
 {% csrf_token %}
@@ -27,12 +35,22 @@ Add To Your Story
 <input type="submit" value="Add"/>
 </form>
 
-<form action="clear" method="post">
+{% else %}
+
+{% for Line in Lines %}
+<p id="line"> {{ Line.content }} </p>
+{% endfor %}
+
+<form action="create" method="post">
 {% csrf_token %}
 <input type="submit" value="New Story"/>
 </form>
+
+{% endif %}
 
 
 </body>
 
 </html>
+
+
