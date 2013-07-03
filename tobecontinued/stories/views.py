@@ -12,15 +12,6 @@ def submitLine(request):
     s = Story.objects.filter(title__startswith = "Sadek")
     Line(content = sentence, story = s[0]).save()
     return HttpResponseRedirect('story')
-<<<<<<< HEAD
-    
-def storyline(request):
-    stories = Story.objects.filter(title = "Sadek the Duck")
-    lines = Line.objects.filter(story = stories[0])
-    x=len(lines)
-    c=lines[x-1]
-    context={'stories/storyline':c}
-=======
 
 def storyline(request, storyID):
     stories = Story.objects.filter(id = storyID)
@@ -29,7 +20,6 @@ def storyline(request, storyID):
     if stories != []:
 	lines = Line.objects.filter(story = stories[0])
     	context={'Lines':lines}	
->>>>>>> d4b107df61f305cc52ba56322dadb65c37db7f32
     return render(request,'stories/storyline.html',context)
 
 
@@ -44,3 +34,5 @@ def newStory(request):
     a.save()
     return HttpResponseRedirect('story/' + a.id)
     
+def profile(request):
+    return render(request, 'stories/profile.html', {})
