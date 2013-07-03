@@ -11,4 +11,8 @@ body { background-color:#2f4b66
 
 #sent {color:white; font-size:120%; font-family:"tahoma";}
 
-#line{color:white;font-family:"tahoma";}
+#line{color:white;font-family:"tahoma";font-size:110%;}
+
+#storytitle{color:white;font-family:"tahoma";font-size:130%;}
+
+#ol{color:white;font-family:"tahoma";font-size:110%;}
