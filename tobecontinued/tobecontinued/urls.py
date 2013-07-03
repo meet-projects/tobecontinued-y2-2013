@@ -7,6 +7,7 @@ from stories import views
 
 urlpatterns = patterns('',
                        url(r'^home$', views.homePage),
+                       url(r'^profile$', views.profile),
                        url(r'^story/(?P<storyID>\d+)/submitLine$', views.submitLine, name='submitLine'),
                        url(r'^story/(?P<storyID>\d+)$', views.storyline),
                        url(r'^create$', views.create),

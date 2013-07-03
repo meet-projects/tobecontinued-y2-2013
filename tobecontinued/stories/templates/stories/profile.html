@@ -1,40 +1,45 @@
 <DOCTYPE html>
 <html>
+
 <head>
 <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/profile.css">
 </head>
+
 <body>
 <h1> Welcome To Your Profile "username"</h1>
 <br><br><br><br>
-<h2> What Would You Like To Do<h2>
+<h2> What Would You Like To Do</h2>
+<br><br><br><br>
+<br><br><br><br>
+
+
+<div id="main">
+	<div id="left">
+		<div class="menu-item">Create</div>   
+		<div class="menu-item">Continue</div> 
+                <div class="menu-item">Join</div> <br><br>
+                <div class="menu-item">Library</div>
+	</div>
+
+	<div id="center">
+		<div class="menu-item">Begin a new story </div>                                              
+                <div class="menu-item">Complete old stories you have already begun </div>                    
+                <div class="menu-item">Join your friends and help them finish there stories </div>           
+                <div class="menu-item">Here you have an acces to all the stories that were written</div>     
+
+	</div>
+	<div id="right">
+		<div><img class="menu-image" src="{{ STATIC_URL }}images/create.jpg" width="175" height="175">   </div>  
+                <div><img class="menu-image" src="{{ STATIC_URL }}images/continue.jpg" width="175" height="175"> </div>
+                <div><img class="menu-image" src="{{ STATIC_URL }}images/groups.jpg" width="175" height="175">   </div>
+                <div><img class="menu-image" src="{{ STATIC_URL }}images/feather1.jpg" width="175" height="175"> </div>
+	</div>
+</div>	
 
 
 
-<table border=3>
-<tr>
-<td>Create</td>
-<td>Begin a new story </td>
-<td><img src="{{ STATIC_URL }}images/continue.jpg" width="50" height="50"></td>
-</tr>
+</div>
 
-<tr>
-<td>Continue</td>
-<td>Complete old stories you have begun </td>
-<td></td>
-</tr>
-
-<tr>
-<td>Join</td>
-<td>Join your friends and help them finish there stories</td>
-<td></td>
-</tr>
-
-<tr>
-<td>Read</td>
-<td>Have an acces to all the stories that were written</td>
-<td></td>
-</tr>
-</table>
 
 </body>
 </html>

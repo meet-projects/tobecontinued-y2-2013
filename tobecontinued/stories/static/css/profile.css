@@ -1,4 +1,55 @@
 body { background-color:#2f4b66;
 }
-#new{font-size:20%;
+
+
+/*#table1{font-size:100%;font-family:"tahoma"; margin:10% 10%;
 }
+
+
+
+#table2{font-size:100%;font-family:"tahoma"; margin:30% 0%;
+}
+
+
+#table3{font-size:100%;font-family:"tahoma"; margin:50% 10%;
+}*/
+
+.menu-item {
+	margin-bottom: 150px;font-size:30;
+
+}
+
+.menu-item-div {
+	width: 500px;
+	float: left;
+	margin-left: 20%;
+	display: inline-block;
+}
+
+.menu {
+	position: relative;
+}
+
+.menu-image {
+	margin-bottom: 10px;
+}
+
+#main {
+	text-align: center;
+}
+
+#left {
+	float: left;
+	width: 30%;
+}
+
+#center {
+	float: left;
+	width: 40%;
+}
+
+#right {
+	float: right;
+	width: 30%;
+}
+
