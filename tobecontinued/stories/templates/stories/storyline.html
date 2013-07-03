@@ -3,7 +3,7 @@
 <link rel="stylesheet"type="text/css"
 href= "{{ STATIC_URL }}css/storyline.css">
 <title>
-Add To Your Story
+Create Your Story
 </title>
 </head>
 <body>
@@ -11,7 +11,7 @@ Add To Your Story
 ~To Be Continued~
 </div>
 
-<div id="create">
+<div id="Add">
 Add To Your Story
 </div>
 <br><br><br><br>
@@ -19,6 +19,7 @@ Add To Your Story
 {% for Line in Lines %}
 <p id="line"> {{ Line.content }} </p>
 {% endfor %}
+
 
 
 <form action="submitLine" method="post">
