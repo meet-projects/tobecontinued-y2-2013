@@ -9,7 +9,7 @@ def homePage(request):
 
 def create(request):
     context = {}
-    return render(request, 'creatstory.html', context)
+    return render(request, 'stories/createstory.html', context)
 
 def submitLine(request, storyID):
     sentence = request.POST['sentence']

@@ -7,6 +7,10 @@ def homePage(request):
     context = {}
     return render(request, 'stories/HomePage.html', context)
 
+def create(request):
+    context = {}
+    return render(request, 'createstory.html', context)
+
 def submitLine(request, storyID):
     sentence = request.POST['sentence']
     s = Story.objects.filter(id = storyID)
