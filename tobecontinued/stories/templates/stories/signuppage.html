@@ -14,13 +14,13 @@ To Be Continued - Sign Up
 <img  id="diff" src="{{ STATIC_URL }}images/pic.jpg" alt= "Logo" 
 width="95%" height="55%">
 
-
 <p>
 To Be Continued - Sign Up
 </p>
 <div id="sign_div_con">
-<form id="signup_container">
-	<div class="signup"><span> First name </span><input type="text" name="Firstname" placeholder="Firstname"/></div>
+<form action = "/createUser" method = "post" id="signup_container">
+	{% csrf_token %}
+	<div class="signup"><span> First name </span><input type="text" name="firstname"/></div>
 	<br>
 	<div class="signup"><span> Last name </span> <input type="text" name="Lastname" placeholder="Lastname"/> </div>
 	<br>
