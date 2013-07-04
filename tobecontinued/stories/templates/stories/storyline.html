@@ -24,7 +24,7 @@ Story title: {{storyTitle}}
 
 
 
-{% if bool==False %}
+{% if not bool %}
 {% for Line in Lines %}
 <p id="line"> {{ Line.content }} </p>
 {% endfor %}
