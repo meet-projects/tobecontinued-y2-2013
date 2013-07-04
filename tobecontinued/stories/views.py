@@ -7,6 +7,20 @@ def homePage(request):
     context = {}
     return render(request, 'stories/HomePage.html', context)
 
+def logIn(request):
+    
+
+def createUser(request):
+    firstname = request.POST['firstname']
+    lastname = request.POST['lastname']
+    email = request.POST['Email']
+    userName = request.POST['UserName']
+    password = request.POST['Password']
+    new = User(username = userName, email = email, password = password, first_name = firstname, last_name = lastname)
+    new.save()
+    return HttpResponseRedirect('signupsuccess')
+    
+
 def create(request):
     context = {}
     return render(request, 'stories/createstory.html', context)
