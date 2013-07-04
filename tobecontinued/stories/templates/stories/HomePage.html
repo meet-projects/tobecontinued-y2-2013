@@ -4,6 +4,7 @@
 
 
 <link rel="stylesheet"type="text/css" href="{{ STATIC_URL }}css/HomePage.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script type="text/javascript"  src="{{ STATIC_URL }}js/HomePage.js"></script>
 
 
@@ -23,7 +24,7 @@ width="95%" height="55%">
 <br>
 <br>
 <br>
-<div id="border">
+<!--<div id="border">
 <table>
 <tr>
 <th>
@@ -41,11 +42,11 @@ Password
 <td><input type="password" name = "password" placeholder="Enter Password">
 </td>
 <td>
-<input type="submit" name="submit" value="Login">
+<p  id="login1">Login</p>
 </td>
 </tr>
-</table>
-</div>
+</table> 
+</div> -->
 
 <br/>
 </form>
@@ -61,7 +62,7 @@ password: <input type = "password" name = "password"/><br><br/>
 <form action="signup" method="post">
 {% csrf_token %}
 <div id="ll">Don't have an account?
-<input type="submit" value="Sign up"/> now!</div>
+<a href="http://127.0.0.1:8001/signup" target=""> Sign up</a> now!</div>
 </form>
 
 

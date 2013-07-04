@@ -1,6 +1,9 @@
-window.onload = function(){
-	datebox = document.getElementById('date')
-	var d=new Date();
-	datebox.text=d.toString();
-}
-
+$(document).ready(function () {
+    $('#').hover(
+	function() { 
+		$(this).css('color', 'white'); 
+	},
+	function() {
+		$(this).css('color', 'black');
+	});
+});
