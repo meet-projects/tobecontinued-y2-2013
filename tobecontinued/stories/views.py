@@ -2,6 +2,8 @@
 from django.shortcuts import render
 from stories.models import Line, Story
 from django.http import HttpResponseRedirect
+from django.contrib.auth.models import User
+from django.contrib.auth import authenticate, login
 
 def homePage(request):
     context = {}
@@ -14,6 +16,17 @@ def homePage(request):
     #for user in usersL:
 	#if user.username == User1 and user.password == Pass:
 	 #   HttpResponseRedirect('profile/' + user)
+def logIn(request):
+    username1 = request.POST['username']
+    password2 = request.POST['password']
+    user = authenticate(username = username1, password = password2)
+    if user is not None:
+	login (request, user)
+        #return HttpResponseRedirect('profile/'+ username1)
+        return HttpResponseRedirect('create')
+    else:
+	return HttpResponseRedirect('home')
+    
 
 def createUser(request):
     firstname = request.POST['firstname']
@@ -21,8 +34,7 @@ def createUser(request):
     email = request.POST['Email']
     userName = request.POST['UserName']
     password = request.POST['Password']
-    new = User(username = userName, email = email, password = password, first_name = firstname, last_name = lastname)
-    new.save()
+    User.objects.create_user(username = userName, email = email, password = password, first_name = firstname, last_name = lastname)
     return HttpResponseRedirect('signupsuccess')
     
 
