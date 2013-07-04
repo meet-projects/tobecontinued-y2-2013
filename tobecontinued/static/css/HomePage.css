@@ -5,9 +5,6 @@ background-color:#cccccc;}
 }
 
 
-p {color:white; font-size:200%;font-family:"tahoma";
-
-}
 
 #username {color:white; font-size:100%;font-family:"tahoma";
 
@@ -29,4 +26,8 @@ margin-left:3%;
 	border-color:#CCCCFF;
 	border-radius:10px;
 	margin-right:65%
+}
+
+#login1 {color:white; font-size:60%;font-family:"tahoma";
+
 }

@@ -30,3 +30,71 @@ margin-left:3%;
 	border-radius:10px;
 	margin-right:65%
 }
+
+#login1 {color:white; font-size:100%;font-family:"tahoma";
+}
+
+#login2{-moz-box-shadow:inset -1px 1px 10px 0px #211c1c;
+	-webkit-box-shadow:inset -1px 1px 10px 0px #211c1c;
+	box-shadow:inset -1px 1px 10px 0px #211c1c;
+	background-color:transparent;
+	-moz-border-radius:11px;
+	-webkit-border-radius:11px;
+	border-radius:11px;
+	border:1px solid #1c1615;
+	display:inline-block;
+	color:#ffffff;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:8px 12px;
+	text-decoration:none;
+	text-shadow:-1px 1px 9px #261817;
+}.classname:active {
+	position:relative;
+	top:1px;
+}
+
+#user{-moz-box-shadow:inset -2px 1px 13px -4px #2e222e;
+	-webkit-box-shadow:inset -2px 1px 13px -4px #2e222e;
+	box-shadow:inset -2px 1px 13px -4px #2e222e;
+	background-color:transparent;
+	-moz-border-radius:11px;
+	-webkit-border-radius:11px;
+	border-radius:11px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	color:#817a82;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 23px;
+	text-decoration:none;
+	text-shadow:4px 10px 8px #030103;
+}.classname:active {
+	position:relative;
+	top:1px;
+}
+
+
+#password{
+	-moz-box-shadow:inset -2px 1px 13px -4px #2e222e;
+	-webkit-box-shadow:inset -2px 1px 13px -4px #2e222e;
+	box-shadow:inset -2px 1px 13px -4px #2e222e;
+	background-color:transparent;
+	-moz-border-radius:11px;
+	-webkit-border-radius:11px;
+	border-radius:11px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	color:#817a82;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 23px;
+	text-decoration:none;
+	text-shadow:4px 10px 8px #030103;
+}.classname:active {
+	position:relative;
+	top:1px;
+}
