@@ -20,3 +20,13 @@ p {color:white; font-size:200%;font-family:"tahoma";
 
 }
 #ll{color:white;font-size:100%;}
+
+#diff {
+margin-left:3%;
+}
+
+#border {border:1px solid;
+	border-color:#CCCCFF;
+	border-radius:10px;
+	margin-right:65%
+}

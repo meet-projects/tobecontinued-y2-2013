@@ -12,12 +12,14 @@ To Be Continued
 </head>
 <body>
 
+<img  id="diff" src="{{ STATIC_URL }}images/pic.jpg" alt= "Logo" 
+width="95%" height="55%">
 
-
 <br>
 <br>
 <br>
 <br>
+<div id="border">
 <table>
 <tr>
 <th>
@@ -39,11 +41,12 @@ Password
 </td>
 </tr>
 </table>
+</div>
 
-<br>
+<br> <br>
 <form action="signup" method="post">
 {% csrf_token %}
-<div id="ll">Don't have an account?<br><br>
+<div id="ll">Don't have an account?
 <input type="submit" value="Sign up"/> now!</div>
 </form>
 
