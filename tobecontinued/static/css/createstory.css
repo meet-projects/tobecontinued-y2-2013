@@ -3,3 +3,16 @@ body { background-color:#2f4b66
 
 #title {color:white; font-size:500%; text-align:center;font-family:"tahoma"; font-style:normal;
 }
+#create{color:white; font-size:200%;position:absolute;top:15%;right:40%;text-decoration:underline;}
+
+#hind{color:white; font-size:110%;font-family:"tahoma";}
+
+#First{color:white; font-size:110%;font-family:"tahoma";}
+
+#hind2{width:15%;}
+
+#first3{width:80%;}
+
+#Num{color:white; font-size:110%;font-family:"tahoma";}
+
+#num2{width:2%}

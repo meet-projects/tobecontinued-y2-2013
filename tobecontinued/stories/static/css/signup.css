@@ -1,23 +1,24 @@
-body { background-color:#2f4b66
+body {
+background-image: url('../images/book.jpeg');
 }
 
 #diff {
 margin-left:3%;
 } 
 
-p { color:white; font-size:150%; text-align:center;
+p { color:#2f4b66; font-size:150%; text-align:center;
 }
 
-.signup { color:white; font-size:18; text-align:center;
+.signup { color:#2f4b66; font-size:18; text-align:center;
 }
 
-#signupbutton {color:#0066FF; font-size:24; 
+#signupbutton {color:#0066FF; font-size:18; 
 }
 
 #signup_container {
 	text-align:center;
 	border:1px solid;
-	border-color:#CCCCFF;
+	border-color:#2f4b66;
 	border-radius:10px;
 }
 #sign_div_con{

@@ -13,6 +13,7 @@ urlpatterns = patterns('',
                        url(r'^create$', views.create),
                        url(r'^newStory$' , views.newStory),
                        url(r'^signup$',views.signup),
+                       url(r'^signupsuccess$',views.signupsuccess),
                        
                       
     # Examples:
