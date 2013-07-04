@@ -16,7 +16,8 @@ urlpatterns = patterns('',
                        url(r'^signup$', views.signup),
                        url(r'^createUser', views.createUser),
                        url(r'^logIn', views.logIn),
-                       
+                       url(r'^continue', views.Continue),
+                       url(r'^library', views.library),
                       
     # Examples:
     # url(r'^$', 'tobecontinued.views.home', name='home'),

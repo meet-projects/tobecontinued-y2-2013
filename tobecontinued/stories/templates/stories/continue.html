@@ -1,0 +1,24 @@
+<!Doctype html>
+
+<html>
+
+<head>
+</head>
+
+<body>
+
+<center>
+
+{% for story in stories %}
+
+<div>
+<a href = "/story/{{ story.id }}" target = "_blank"> {{ story.title }}</a>
+</div>
+
+{% endfor %}
+
+</body>
+</html>
+
+
+

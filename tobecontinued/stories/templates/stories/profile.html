@@ -7,6 +7,7 @@
 
 <body>
 <h1> Welcome To Your Profile {{ user.username }}</h1>
+<h23> {{ user.first_name }} {{ user.last_name }}</h23>
 <br><br><br><br>
 <h2> What Would You Like To Do</h2>
 <br><br><br><br>
@@ -15,23 +16,38 @@
 
 <div id="main">
 	<div id="left">
-		<div class="menu-item">Create</div>   
-		<div class="menu-item">Continue</div> 
-                <div class="menu-item">Join</div> <br><br>
-                <div class="menu-item">Library</div>
+		<div class="menu-item">
+			<form action="/create" method="post">
+				{% csrf_token %}
+				<input type="submit" value="Create"/>
+			</form>
+		</div>   
+		<div class="menu-item">
+			<form action="/continue" method="post">
+				{% csrf_token %}
+				<input type="submit" value="Continue"/>
+			</form>
+		</div> 
+                <!--<div class="menu-item">Join</div> <br>-->
+                <div class="menu-item">
+			<form action="/library" method="post">
+				{% csrf_token %}
+				<input type="submit" value="Library"/>
+			</form>
+		</div>
 	</div>
 
 	<div id="center">
 		<div class="menu-item">Begin a new story </div>                                              
                 <div class="menu-item">Complete old stories you have already begun </div>                    
-                <div class="menu-item">Join your friends and help them finish there stories </div>           
-                <div class="menu-item">Here you have an acces to all the stories that were written</div>     
+                <!--<div class="menu-item">Join your friends and help them finish there stories </div>-->
+                <div class="menu-item">Here you can have access to all the stories that were written</div>     
 
 	</div>
 	<div id="right">
 		<div><img class="menu-image" src="{{ STATIC_URL }}images/create.jpg" width="175" height="175">   </div>  
                 <div><img class="menu-image" src="{{ STATIC_URL }}images/continue.jpg" width="175" height="175"> </div>
-                <div><img class="menu-image" src="{{ STATIC_URL }}images/groups.jpg" width="175" height="175">   </div>
+                <!--<div><img class="menu-image" src="{{ STATIC_URL }}images/groups.jpg" width="175" height="175">   </div>-->
                 <div><img class="menu-image" src="{{ STATIC_URL }}images/feather1.jpg" width="175" height="175"> </div>
 	</div>
 </div>	

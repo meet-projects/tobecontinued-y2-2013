@@ -17,6 +17,8 @@ To Be Continued
 <img  id="diff" src="{{ STATIC_URL }}images/pic.jpg" alt= "Logo" 
 width="95%" height="55%">
 
+<form action="/logIn" method = "post">
+{% csrf_token %}
 <br>
 <br>
 <br>
@@ -34,9 +36,9 @@ Password
 </div></th>
 </tr>
 <tr>
-<td><input type="text" name="Username" placeholder="Enter Username">
+<td><input type="text" name="username" placeholder="Enter Username">
 </td>
-<td><input type="text" name="Password" placeholder="Enter Password">
+<td><input type="password" name = "password" placeholder="Enter Password">
 </td>
 <td>
 <input type="submit" name="submit" value="Login">
@@ -46,13 +48,14 @@ Password
 </div>
 
 <br/>
+</form>
 
-<form action="/logIn" method = "post">
+<!--<form action="/logIn" method = "post">
 {% csrf_token %}
 username: <input type="text" name="username"/><br><br/>
 password: <input type = "password" name = "password"/><br><br/>
 <input type = "submit" value ="Login"/>
-</form>
+</form>-->
 
 <br> <br>
 <form action="signup" method="post">

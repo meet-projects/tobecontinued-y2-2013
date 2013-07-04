@@ -1,4 +1,3 @@
-# Create your views here.
 from django.shortcuts import render
 from stories.models import Line, Story
 from django.http import HttpResponseRedirect
@@ -86,3 +85,22 @@ def signup(request):
 
 def signupsuccess(request):
     return render(request, 'stories/signupsuccess.html',{})
+
+def Continue(request):
+    stories = []
+    list1 = Story.objects.all()
+    for story in list1:
+	if story.maxNum != story.lineNum:
+	    stories.append(story)
+    context = {'stories':stories}
+    return render(request, 'stories/continue.html', context)
+
+def library(request):
+    stories = []
+    list1 = Story.objects.all()
+    for story in list1:
+	if story.maxNum == story.lineNum:
+	    stories.append(story)
+    context = {'stories':stories}
+    return render(request, 'stories/continue.html', context)
+
