@@ -14,8 +14,11 @@ def create(request):
 def submitLine(request, storyID):
     sentence = request.POST['sentence']
     s = Story.objects.filter(id = storyID)
-    Line(content = sentence, story = s[0]).save()
-    s[0].lineNum += 1
+    s1 = s[0]
+    Line(content = sentence, story = s1).save()
+    s1.lineNum += 1
+    s1.save()
+    print s1.lineNum
     return HttpResponseRedirect('/story/' + str(storyID))
 
 def storyline(request, storyID):
@@ -28,7 +31,7 @@ def storyline(request, storyID):
 	if s.lineNum == s.maxNum:
 	    context = {'Lines':lines, 'storyTitle':s.title, 'storyID': str(s.id), 'bool' :True} 
     	else:
-	    context={'Lines':lines[len(lines)-1], 'storyTitle':s.title, 'storyID': str(s.id), 'bool' :False}	
+	    context={'Lines':[lines[len(lines)-1]], 'storyTitle':s.title, 'storyID': str(s.id), 'bool' :False}	
     return render(request,'stories/storyline.html',context)
 
 

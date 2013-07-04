@@ -24,7 +24,7 @@ Story title: {{storyTitle}}
 
 
 
-{% if bool==False %}
+{% if not bool %}
 {% for Line in Lines %}
 <p id="line"> {{ Line.content }} </p>
 {% endfor %}
@@ -41,7 +41,7 @@ Story title: {{storyTitle}}
 <p id="line"> {{ Line.content }} </p>
 {% endfor %}
 
-<form action="create" method="post">
+<form action="/create" method="post">
 {% csrf_token %}
 <input type="submit" value="New Story"/>
 </form>
