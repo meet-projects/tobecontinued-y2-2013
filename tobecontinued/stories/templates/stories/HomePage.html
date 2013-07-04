@@ -4,6 +4,7 @@
 
 
 <link rel="stylesheet"type="text/css" href="{{ STATIC_URL }}css/HomePage.css">
+<script type="text/javascript"  src="{{ STATIC_URL }}js/HomePage.js"></script>
 
 
 <title>
@@ -11,6 +12,7 @@ To Be Continued
 </title>
 </head>
 <body>
+<span id="date"></span>
 
 
 
@@ -30,15 +32,18 @@ Password
 </div></th>
 </tr>
 <tr>
-<td><input type="text" name="Username" value="Enter Username">
+<td><input type="text" name="Username" placeholder="Enter Username">
 </td>
-<td><input type="text" name="Password" value="Enter Password">
+<td><input type="text" name="Password" placeholder="Enter Password">
 </td>
 <td>
 <input type="submit" name="submit" value="Login">
 </td>
 </tr>
 </table>
+
+
+
 
 <br>
 <form action="signup" method="post">
