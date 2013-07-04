@@ -7,8 +7,13 @@ def homePage(request):
     context = {}
     return render(request, 'stories/HomePage.html', context)
 
-def logIn(request):
-    
+#def logIn(request):
+ #   User1 = request.POST['username']
+  #  Pass = request.POST['password']
+   # usersL = User.objects.all
+    #for user in usersL:
+	#if user.username == User1 and user.password == Pass:
+	 #   HttpResponseRedirect('profile/' + user)
 
 def createUser(request):
     firstname = request.POST['firstname']
