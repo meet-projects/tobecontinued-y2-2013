@@ -4,26 +4,20 @@ from stories.models import Line, Story
 from django.http import HttpResponseRedirect
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login
+from django.contrib.auth.decorators import login_required
+
 
 def homePage(request):
     context = {}
     return render(request, 'stories/HomePage.html', context)
 
-#def logIn(request):
- #   User1 = request.POST['username']
-  #  Pass = request.POST['password']
-   # usersL = User.objects.all
-    #for user in usersL:
-	#if user.username == User1 and user.password == Pass:
-	 #   HttpResponseRedirect('profile/' + user)
 def logIn(request):
     username1 = request.POST['username']
     password2 = request.POST['password']
     user = authenticate(username = username1, password = password2)
     if user is not None:
 	login (request, user)
-        #return HttpResponseRedirect('profile/'+ username1)
-        return HttpResponseRedirect('create')
+        return HttpResponseRedirect('profile')
     else:
 	return HttpResponseRedirect('home')
     
@@ -46,7 +40,8 @@ def submitLine(request, storyID):
     sentence = request.POST['sentence']
     s = Story.objects.filter(id = storyID)
     s1 = s[0]
-    Line(content = sentence, story = s1).save()
+    u = request.user
+    Line(content = sentence, story = s1, user = u).save()
     s1.lineNum += 1
     s1.save()
     print s1.lineNum
@@ -75,13 +70,15 @@ def newStory(request):
     title1 = request.POST['Title']
     firstLine = request.POST['firstLine']
     numStory = request.POST['numLine']
-    new = Story(title = title1, maxNum = numStory, lineNum = 1)
+    u = request.user
+    new = Story(title = title1, user = u, maxNum = numStory, lineNum = 1)
     new.save()
-    Line(content = firstLine, story = new).save()
+    Line(content = firstLine, user = u, story = new).save()
     return HttpResponseRedirect('/story/' + str(new.id))
-    
+
+@login_required    
 def profile(request):
-    context = {'storiesList':Story.objects.all()}
+    context = {'storiesList':Story.objects.all(), 'user' : request.user}
     return render(request, 'stories/profile.html', context)
 
 def signup(request):
