@@ -74,3 +74,6 @@ def profile(request):
 
 def signup(request):
     return render(request, 'stories/signuppage.html', {})
+
+def signupsuccess(request):
+    return render(request, 'stories/signupsuccess.html',{})
