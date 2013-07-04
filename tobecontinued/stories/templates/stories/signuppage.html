@@ -18,7 +18,8 @@ width="95%" height="55%">
 To Be Continued - Sign Up
 </p>
 <div id="sign_div_con">
-<form id="signup_container">
+<form action = "/createUser" method = "post" id="signup_container">
+	{% csrf_token %}
 	<div class="signup"><span> First name </span><input type="text" name="firstname"/></div>
 	<br>
 	<div class="signup"><span> Last name </span> <input type="text" name="lastname"/> </div>
