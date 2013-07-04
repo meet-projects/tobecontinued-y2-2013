@@ -16,7 +16,12 @@ width="95%" height="55%">
 
 <p>The sign up was successful!</p>
 
-<input id="rhp" type="submit" name="submit" value="Return To Home Page">
+<!--<input action =  id="rhp" type="submit" name="submit" value="Return To Home Page">-->
+
+<form action="create" method="post">
+{% csrf_token %}
+<input type="submit" value="create page"/>
+</form>
 <br> <br>
 </body>
 
