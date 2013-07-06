@@ -6,7 +6,12 @@
 </head>
 
 <body>
-<h1> Welcome To Your Profile {{ user.username }}</h1>
+<h1> Welcome To Your Profile {{ user.username }}
+<form action="/logout" method="post">
+{% csrf_token %}
+<input type="submit" value="Create"/>
+</form>
+</h1>
 <h23> {{ user.first_name }} {{ user.last_name }}</h23>
 <br><br><br><br>
 <h2> What Would You Like To Do</h2>
