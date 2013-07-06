@@ -26,7 +26,7 @@ Add To Your Story
 
 {% if not bool %}
 {% for Line in Lines %}
-<p id="line"> {{ Line.content }} </p>
+<p id="line"> {{ Line.user.username }}: {{ Line.content }} </p>
 {% endfor %}
 
 <form action="{% url 'submitLine' storyID %}" method="post">
@@ -38,7 +38,7 @@ Add To Your Story
 {% else %}
 
 {% for Line in Lines %}
-<p id="line"> {{ Line.content }} </p>
+<p id="line"> {{ Line.user.username }}: {{ Line.content }} </p>
 {% endfor %}
 
 <form action="/create" method="post">

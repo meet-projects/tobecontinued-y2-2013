@@ -1,6 +1,5 @@
-body {
-background-image: url('../images/book.jpeg');
-}
+body {background:url('../images/blue2.jpeg');
+background-color:#cccccc;}
 
 #diff {
 margin-left:3%;
