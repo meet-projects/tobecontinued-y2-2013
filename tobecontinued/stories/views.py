@@ -2,7 +2,7 @@ from django.shortcuts import render
 from stories.models import Line, Story
 from django.http import HttpResponseRedirect
 from django.contrib.auth.models import User
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 
 
@@ -111,4 +111,8 @@ def library(request):
 	    stories.append(story)
     context = {'stories':stories}
     return render(request, 'stories/continue.html', context)
+
+def logOut(request):
+    logout(request)
+    return HttpResponseRedirect('/home')
 
