@@ -1,5 +1,7 @@
-body {background:url('../images/blue2.jpeg');
-background-color:#cccccc;}
+body {
+	background-image:url('../notebookpaper.jpg');
+}
+
 
 #title {color:white; font-size:500%; text-align:center;font-family:"tahoma"; font-style:normal;
 }
