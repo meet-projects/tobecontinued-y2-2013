@@ -28,7 +28,15 @@ def createUser(request):
     userName = request.POST['UserName']
     password = request.POST['Password']
     User.objects.create_user(username = userName, email = email, password = password, first_name = firstname, last_name = lastname)
-    return HttpResponseRedirect('signupsuccess')
+    #username1 = request.POST['username']
+    #password2 = request.POST['password']
+    user = authenticate(username = userName, password = password)
+    if user is not None:
+	login (request, user)
+        return HttpResponseRedirect('signupsuccess')
+    else:
+	return HttpResponseRedirect('home')
+    #return HttpResponseRedirect('signupsuccess')
     
 
 def create(request):

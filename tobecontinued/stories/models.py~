@@ -10,6 +10,7 @@ class Line (models.Model):
 		return self.content
 
 class Story (models.Model):
+        user = models.ForeignKey('User')
 	title = models.CharField(max_length=30)
         maxNum = models.IntegerField()
         lineNum = models.IntegerField()
