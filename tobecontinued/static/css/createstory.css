@@ -1,7 +1,5 @@
-body {
-	background-image:url('../notebookpaper.jpg');
-}
-
+body {background-image:url('blue2.jpeg');
+background-color:#cccccc;}
 
 #title {color:white; font-size:500%; text-align:center;font-family:"tahoma"; font-style:normal;
 }
@@ -18,3 +16,4 @@ body {
 #Num{color:white; font-size:110%;font-family:"tahoma";}
 
 #num2{width:2%}
+
