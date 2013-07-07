@@ -7,12 +7,13 @@ background-color:#cccccc;}
 /*#Add{ color:black; font-size:200%;position:absolute;top:15%;right:40%;text-decoration:underline;}*/
 
 
+
 #sentence {width:75%;}
 
-#sent {color:black; font-size:120%; font-family:"cursive";}
+#sent {color:black; font-size:120%;font-family:"tahoma";}
 
-#line{color:black;font-family:"tahoma";font-size:110%;}
+#line{color:black;font-family:"tahoma";font-size:110%;text-align:center;}
 
-#storytitle{color:black;font-family:"tahoma";font-size:180%;}
+#storytitle{color:black;font-family:"tahoma";font-size:180%;text-align:center;}
 
 #ol{color:black;font-family:"tahoma";font-size:110%;}

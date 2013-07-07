@@ -1,34 +1,34 @@
-body {background-image:url('blue2.jpeg');
+body {background:url('../images/bg1.jpeg');
 background-color:#cccccc;}
 
-#title {color:white; font-size:500%; text-align:center;font-family:"tahoma"; font-style:normal;
+#title {color:black; font-size:500%; text-align:center;font-family:"tahoma"; font-style:normal;
 }
 
 
-p {color:white; font-size:200%;font-family:"tahoma";
+p {color:black; font-size:200%;font-family:"tahoma";
 
 }
 
-#username {color:white; font-size:100%;font-family:"tahoma";
+#username {color:black; font-size:100%;font-family:"tahoma";
 
 }
 
-#pass {color:white; font-size:100%;font-family:"tahoma";
+#pass {color:black; font-size:100%;font-family:"tahoma";
 
 }
-#su {color:white; font-size:100%;font-family:"tahoma";
+#su {color:black; font-size:100%;font-family:"tahoma";
 
 }
-#ll{color:white;font-size:100%;}
+#ll{color:black;font-size:100%;}
 
 #diff {
 margin-left:3%;
 }
 
 #border {border:1px solid;
-	border-color:#CCCCFF;
+	border-color:black;
 	border-radius:10px;
-	margin-right:65%
+	margin-right:40%
 }
 
 #login1 {color:white; font-size:100%;font-family:"tahoma";

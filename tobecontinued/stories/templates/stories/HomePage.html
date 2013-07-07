@@ -3,7 +3,7 @@
 <head>
 
 
-<link rel="stylesheet"type="text/css" href="{{ STATIC_URL }}css/HomePage.css">
+<link rel="stylesheet"type="text/css" href="{{ STATIC_URL }}css/HomePage.css"/>
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script type="text/javascript"  src="{{ STATIC_URL }}js/HomePage.js"></script>
 
@@ -15,7 +15,7 @@ To Be Continued
 <body>
 <span id="date"></span>
 
-<img  id="diff" src="{{ STATIC_URL }}images/pic.jpg" alt= "Logo" 
+<img  id="diff" src="{{ STATIC_URL }}images/pic.png" alt= "Logo" 
 width="95%" height="55%">
 
 <form action="/logIn" method = "post">
@@ -58,7 +58,7 @@ password: <input type = "password" name = "password"/><br><br/>
 <input type = "submit" value ="Login"/>
 </form>-->
 
-<br> <br>
+
 <form action="signup" method="post">
 {% csrf_token %}
 <div id="ll">Don't have an account?

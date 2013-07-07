@@ -1,4 +1,4 @@
-body {/*background-image:url('blue2.jpeg');*/
+body {background:url('../images/blue2.jpeg');
 background-color:#cccccc;}
 
 #title {color:white; font-size:500%; text-align:center;font-family:"tahoma"; font-style:normal;

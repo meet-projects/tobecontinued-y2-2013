@@ -1,4 +1,4 @@
-body {background:url('../images/blue2.jpeg');
+body {background:url('../images/bg1.jpeg');
 background-color:#cccccc;}
 
 #diff {
@@ -15,13 +15,16 @@ p { color:#2f4b66; font-size:150%; text-align:center;
 }
 
 #signup_container {
+
 	text-align:center;
 	border:1px solid;
 	border-color:#2f4b66;
-	border-radius:10px;
+	border-radius:17%;
+
 }
+
 #sign_div_con{
-	margin-left:44%;
-        margin-right:40%;
+	margin-left:40%;
+       margin-right:30%;
 }
 

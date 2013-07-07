@@ -110,7 +110,7 @@ def library(request):
 	if story.maxNum == story.lineNum:
 	    stories.append(story)
     context = {'stories':stories}
-    return render(request, 'stories/continue.html', context)
+    return render(request, 'stories/library.html', context)
 
 def logOut(request):
     logout(request)

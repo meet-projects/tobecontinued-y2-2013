@@ -16,13 +16,12 @@ Add To Your Story
 </div>-->
 <br><br>
 
-<br>
-<br>
+
 <div id="storytitle" >
-<center>{{storyTitle}}</center>
+{{storyTitle}}
 </div>
 
-
+<br>
 
 {% if not bool %}
 {% for Line in Lines %}
@@ -31,7 +30,7 @@ Add To Your Story
 
 <form action="{% url 'submitLine' storyID %}" method="post">
 {% csrf_token %}
-<div id="sent">Your sentence </div><br><input id="sentence" type="text" name="sentence"/>
+<div id="sent">Your sentence: </div><br><input id="sentence" type="text" name="sentence"/>
 <input type="submit" value="Add"/>
 </form>
 
