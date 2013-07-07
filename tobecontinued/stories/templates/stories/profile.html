@@ -9,7 +9,7 @@
 <h1> Welcome To Your Profile {{ user.username }}
 <form action="/logout" method="post">
 {% csrf_token %}
-<input type="submit" value="Create"/>
+<input type="submit" value="Log out"/>
 </form>
 </h1>
 <h23> {{ user.first_name }} {{ user.last_name }}</h23>
