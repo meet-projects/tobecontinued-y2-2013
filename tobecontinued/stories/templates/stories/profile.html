@@ -33,14 +33,15 @@ Profile
 		<div class="menu-item">
 			<form action="/continue" method="post">
 				{% csrf_token %}
-				<input type="submit" value="Continue"/>
+
+				<br><input type="submit" value="Continue"/>
 			</form>
 		</div> 
                 <!--<div class="menu-item">Join</div> <br>-->
                 <div class="menu-item">
 			<form action="/library" method="post">
 				{% csrf_token %}
-				<input type="submit" value="Library"/>
+				<br><br><input type="submit" value="Library"/>
 			</form>
 		</div>
 	</div>

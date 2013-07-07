@@ -15,18 +15,16 @@ Create New Story
 
 <form action="/profile" method="post">
 {% csrf_token %}
-<input type="submit" value="{{ User.username }}"/>
+<input type="submit" value="{{ User.username }} Profile"/>
 </form>
 
 <div id="title">
 ~To Be Continued~
 </div>
 
-<div id="create">
-Create Your Story
-</div>
-<br><br><br><br>
-<br><br><br><br><br>
+<br>
+<p id="create">Create</p>
+<br><br>
 
 <form action="newStory" method="post">
 {% csrf_token %}
