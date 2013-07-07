@@ -117,3 +117,22 @@ def logOut(request):
     logout(request)
     return HttpResponseRedirect('/home')
 
+def searchLibrary(request):
+    stories = []
+    key = request.POST['Search']
+    list1 = Story.objects.filter(title__contains = key)
+    for story in list1:
+	if story.maxNum == story.lineNum:
+	    stories.append(story)
+    context = {'stories':stories}
+    return render(request, 'stories/library.html', context)
+
+def searchContinue(request):
+    stories = []
+    key = request.POST['Search']
+    list1 = Story.objects.filter(title__contains = key)
+    for story in list1:
+	if story.maxNum != story.lineNum:
+	    stories.append(story)
+    context = {'stories':stories}
+    return render(request, 'stories/continue.html', context)

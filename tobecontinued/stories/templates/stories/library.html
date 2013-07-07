@@ -9,6 +9,11 @@
 <body>
 <div id="con">~Library~</div>
 
+<form action="/searchLibrary" method="post">
+{% csrf_token %}
+<div id="hind" > Search <input id="hind2" type="text" name="Search"/></div><br>
+<input type="submit" value="Search"/>
+</form>
 
 {% for story in stories %}
 

@@ -7,6 +7,13 @@
 </head>
 
 <body>
+
+<form action="/searchContinue" method="post">
+{% csrf_token %}
+<div id="hind" > Search <input id="hind2" type="text" name="Search"/></div><br>
+<input type="submit" value="Search"/>
+</form>
+
 <div id="con">~Continue~</div>
 
 
