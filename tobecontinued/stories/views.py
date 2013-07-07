@@ -40,7 +40,7 @@ def createUser(request):
     
 
 def create(request):
-    context = {}
+    context = {'User': request.user}
     return render(request, 'stories/createstory.html', context)
 
 def submitLine(request, storyID):
@@ -59,12 +59,13 @@ def storyline(request, storyID):
     s = stories[0]
     list1 = ['Story Not Found']
     context = {'Lines':list1}
+    corrent = request.user
     if stories != []:
 	lines = Line.objects.filter(story = s)
 	if s.lineNum == s.maxNum:
-	    context = {'Lines':lines, 'storyTitle':s.title, 'storyID': str(s.id), 'bool' :True} 
+	    context = {'Lines':lines, 'storyTitle':s.title, 'storyID': str(s.id), 'bool' :True, 'User': corrent} 
     	else:
-	    context={'Lines':[lines[len(lines)-1]], 'storyTitle':s.title, 'storyID': str(s.id), 'bool' :False}	
+	    context={'Lines':[lines[len(lines)-1]], 'storyTitle':s.title, 'storyID': str(s.id), 'bool' :False, 'User': corrent}	
     return render(request,'stories/storyline.html',context)
 
 

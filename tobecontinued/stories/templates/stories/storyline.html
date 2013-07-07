@@ -7,6 +7,10 @@ Create Your Story
 </title>
 </head>
 <body>
+<form action="/profile" method="post">
+{% csrf_token %}
+<input type="submit" value="{{ User.username }}"/>
+</form>
 <div id="title">
 ~To Be Continued~
 </div>
